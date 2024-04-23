@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 def plot_words(word_counts, n=10):
-    """lot a bar chart of word counts.
+    """plot a bar chart of word counts.
     
     Parameters
     ----------
