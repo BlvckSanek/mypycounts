@@ -5,6 +5,7 @@ description = "A package for counting words and others."
 authors = ["Emmanuel Arkoh-Nelson"]
 license = "MIT"
 readme = "README.md"
+include = ["tests/*", "CHANGELOG.md"]
 
 [tool.poetry.dependencies]
 python = ">=3.9"
