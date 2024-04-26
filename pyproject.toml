@@ -10,6 +10,10 @@ include = ["tests/*", "CHANGELOG.md"]
 [tool.poetry.dependencies]
 python = ">=3.9"
 matplotlib = ">=3.8.4"
+click-option-group = { version = "*", python = ">=3.9,<4" }  # Specify Python version constraint
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:version"
 
 [tool.poetry.dev-dependencies]
 
@@ -20,6 +24,7 @@ jupyter = "^1.0.0"
 myst-nb = {version = "^1.1.0", python = "^3.9"}
 sphinx-autoapi = "^3.0.0"
 sphinx-rtd-theme = "^2.0.0"
+python-semantic-release = "^9.5.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
