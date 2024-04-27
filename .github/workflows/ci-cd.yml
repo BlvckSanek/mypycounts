@@ -24,7 +24,7 @@ jobs:
       run: poetry install
 
     - name: Test with pytest
-      run: poetry run pytest test/ --cov=mypycounts --cov-report=xml
+      run: poetry run pytest tests/ --cov=mypycounts --cov-report=xml
 
     - name: Use Codecov tot track coverage
       uses: codecov/codecov-action@v2
