@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mypycounts"
-version = "0.1.0"
+version = "0.2.0"
 description = "A package for counting words and others."
 authors = ["Emmanuel Arkoh-Nelson"]
 license = "MIT"
@@ -11,9 +11,6 @@ include = ["tests/*", "CHANGELOG.md"]
 python = ">=3.9"
 matplotlib = ">=3.8.4"
 click-option-group = { version = "*", python = ">=3.9,<4" }  # Specify Python version constraint
-
-[tool.semantic_release]
-version_variable = "pyproject.toml:version"
 
 [tool.poetry.dev-dependencies]
 
@@ -29,3 +26,9 @@ python-semantic-release = "^9.5.0"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:tool.poetry.version",] # version location
+branch ="master"                                       # branch to make release of
+changelog_file = "CHANGELOG.md"                        # changelog file
+build_command = "pip install poetry && poetry build"   # buid dists
