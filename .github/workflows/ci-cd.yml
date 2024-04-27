@@ -86,7 +86,8 @@ jobs:
           password: ${{ secrets.PYPI_API_TOKEN }}
 
       - name: Publish package distributions to GitHub Releases
-        uses: python-semantic-release/upload-to-gh-release@master
+        uses: python-semantic-release/upload-to-gh-release@v1
         if: steps.release.outputs.released == 'true'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          version: ${{ steps.release.outputs.version }}
